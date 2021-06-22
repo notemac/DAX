@@ -1,8 +1,13 @@
 # Basket Analysis
 
 ## URLs
-[Basket-Analysis on daxpatterns.com](https://www.daxpatterns.com/basket-analysis/)
-
+- [Basket analysis – DAX Patterns](https://www.daxpatterns.com/basket-analysis/)
+- [Market Basket Analysis (Power BI DAX Tutorial) - YouTube](https://www.youtube.com/watch?v=3OlZuXH9Y_g)
+- [Chris Webb's BI Blog: Simple Basket Analysis in DAX Chris Webb's BI Blog (crossjoin.co.uk)](https://blog.crossjoin.co.uk/2010/10/20/simple-basket-analysis-in-dax/)
+- [Basket Analysis Introduction - Best Practice Tips For Power BI (enterprisedna.co)](https://blog.enterprisedna.co/basket-analysis-introduction-best-practice-tips-for-power-bi-using-dax/)
+- [Basket Analysis Example - Power BI Advanced Analytics | Enterprise DNA](https://blog.enterprisedna.co/advanced-basket-analysis-example-in-power-bi-cross-selling/)
+- [Advance DAX Tutorial: Basket Analysis 2.0 | by Davis Zhang | Towards Data Science](https://towardsdatascience.com/explore-the-potential-of-products-through-customers-purchase-behaviour-in-power-bi-basket-a1f77e8a2bf6)
+- [Power BI: Basket Analysis Full Tutorial - Finance BI (finance-bi.com)](https://finance-bi.com/blog/power-bi-basket-analysis/)
 
 ### Example 1
 > Топ3 категорий, которые чаще всего встречаются в чеках совместно с отобранной категорией. Например, с категорией «молокопродукты» чаще всего встречаются в чеках «кондитерские изделия». Нужно в каждый чек залезть.
@@ -158,16 +163,16 @@ EVALUATE row("result", result)
 --EVALUATE r1
 --EVALUATE r2
 ```
-ord
+*ord*
 
 ORDER_ID |
 --- |
 3472929224
 
-prod
+*prod*
 
-ORDER_ID | CATEGORY3_AXA
---- | --- |
+PRODUCT_ID |
+--- |
 8841999520
 9177453506
 9177453486
@@ -176,3 +181,17 @@ ORDER_ID | CATEGORY3_AXA
 9413841322
 9594943279
 9744296302
+
+*r1*
+
+ORDER_ID | CATEGORY3_AXA
+--- | --- |
+3472929224	| Шорты джинсовые
+999999999	| Кроссовки
+111	| Шорты джинсовые
+
+*r2*
+
+result |
+--- |
+Шорты джинсовые: 2, Кроссовки: 1
